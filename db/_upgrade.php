@@ -31,7 +31,7 @@ function xmldb_local_hidehiddencategories_upgrade(){
     require_once("_services.php");
 
     foreach($functions as $name=>$params){
-        $record = $DB->delete_records('hidehiddencategories_backup', array('name'=>$name));
+        $DB->delete_records('hidehiddencategories_backup', array('name'=>$name));
         $record = $DB->get_record('external_functions', array('name'=>$name), '*', MUST_EXIST);
         $DB->insert_record('hidehiddencategories_backup',$record);
         $DB->delete_records('external_functions', array('name'=>$name));
