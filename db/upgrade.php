@@ -42,4 +42,5 @@ function xmldb_local_hidehiddencategories_upgrade(){
         }
         $DB->insert_record('external_functions',$newrecord);
     }
+    return true;
 }
