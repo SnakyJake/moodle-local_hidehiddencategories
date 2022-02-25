@@ -68,7 +68,10 @@ function local_hidehiddencategories_extend_navigation(global_navigation $navigat
  * @return int
  */
 function local_hidehiddencategories_override_webservice_execution($externalfunctioninfo, $params){
-    $callable = array('local_hidehiddencategories_core_course_external', 'get_categories');
-    return call_user_func($callable, $params);
+	if($externalfunctioninfo->name == "core_course_get_categories"){
+		$callable = array('local_hidehiddencategories_core_course_external', 'get_categories');
+		return call_user_func_array($callable, $params);
+	}
+	return false;
 }
 
