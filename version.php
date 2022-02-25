@@ -26,7 +26,7 @@
 defined('MOODLE_INTERNAL') || die;
 
 $plugin->component = 'local_hidehiddencategories';
-$plugin->version  = 2022022301;
-$plugin->release = '1.0.0 ('.$plugin->version.')';
-$plugin->requires = 2019111200;
+$plugin->version  = 2022022500;
+$plugin->release = '2.0.0 ('.$plugin->version.')';
+$plugin->requires = 2021051700;
 $plugin->maturity = MATURITY_STABLE;
